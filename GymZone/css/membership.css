@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    /* Set the background color black */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+
+#navbar-left {
+    float: left;
+}
+
+#navbar-right {
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Style the links inside the navigation bar */
+#navbar-right a {
+    float: right;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+#navbar-right .icon {
+    display: none;
+}
+
+/*background color on hover */
+#navbar-right a:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    /* New background color on hover */
+    transition: 0.6s;
+}
+
+@media screen and (max-width: 940px) {
+
+    #navbar-left,
+    #navbar-right {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    #navbar-left a {
+        display: block;
+    }
+
+    #navbar-right a {
+        float: none;
+        display: block;
+        margin: 10px 10px;
+    }
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #fff;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.6s;
+    /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+    color: #f01e2c;
+    transition: 0.6s;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 30px;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.animated-text-container{
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background-color: #ff4d58;
+    margin-top: 200px;
+}
+
+.animated-text-container:hover{
+    background-color: black;
+}
+
+.animated-text{
+    display: inline-block;
+    padding-left: 100%;
+    animation: zone 20s linear infinite;
+    font-size: 20px;
+    color: white;
+}
+
+.animated-text:hover{
+    color: #ff4d58;
+}
+
+@keyframes zone{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
+
+#footer{
+    background-color: #f01e2c;
+    height: 100px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+.social-icons{
+    padding-top: 20px;
+}
+
+.social-icons a{
+    display: inline-block;
+    margin: 0 15px; /* Adjust the spacing between icons */
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transition: 0.6s;
+}
+
+.overlay-content .active{
+    color: #f01e2c;
+}
+
+.membership{
+    font-size: 50px;
+    color: white;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 940px){
+    .membership{
+        font-size: 30px;
+    }
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.three-month{
+    margin-top: 50px;
+    padding: 10px;
+    flex: 50%;
+}
+
+.six-month{
+    margin-top: 50px;
+    padding: 10px;
+    flex: 50%;
+}
+
+.twelve-month{
+    margin-top: 50px;
+    padding: 10px;
+    flex: 50%;
+}
+
+@media screen and (max-width: 940px){
+    .flex-container{
+        flex-direction: column;
+    }
+}
+
+.table-month,
+.table-annual{
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.table-month,
+.table-month-th,
+.table-month-tr,
+.table-month-td{
+    border: 3px solid red;
+    padding: 10px;
+}
+
+.table-annual,
+.table-annual-th,
+.table-annual-tr,
+.table-annual-td{
+    border: 3px solid red;
+    padding: 10px;
+}
+
+button{
+    border: none;
+}
+
+.subscribe-btn {
+    background-color: #f01e2c;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.subscribe-btn:hover{
+    background-color: #99131c;
+    transition: 0.4s;
+}
